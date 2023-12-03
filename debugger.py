@@ -74,7 +74,6 @@ class Debugger:
                 self._display_help()
             elif command == 'continue':
                 print("Resuming script execution...")
-                break
             elif command.startswith('break'):
                 self._set_breakpoint(command)
             elif command.startswith('list'):
