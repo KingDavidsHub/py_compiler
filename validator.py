@@ -42,11 +42,3 @@ def parse_code(code):
         # Store the current error in the database
         previous_errors[e.lineno] = e.msg
         return False
-
-# Example usage
-code_to_validate = """
-def greet():
-    print("Hello, world!"
-"""
-
-parse_code(code_to_validate)

@@ -53,8 +53,12 @@ class Lexer:
                 self.tokenList.append(token)
             elif self.curChar == '-':
                 # Similar logic for other operators and symbols...
+                token = Token("TT_MINUS", self.curChar, self.curPos, self.curPos)
+                self.tokenList.append(token)
             elif self.curChar.isalpha():
                 # Handle identifiers and keywords...
+                token = Token("TT_IDENTIFIER", self.curChar, self.curPos, self.curPos)
+                self.tokenList.append(token)
             else:
                 self.abort("Unknown token: " + self.curChar)
 
